@@ -1,0 +1,9 @@
+# name : it('...', (done) => { ... })
+# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# key: itd
+# --
+
+it('${1:...}', ( done ) => {
+  $0
+  done();
+});

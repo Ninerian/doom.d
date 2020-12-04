@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: log variable
+# key:logv
+# group: log
+# --
+console.log('$1', $1);$0
