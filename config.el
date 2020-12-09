@@ -133,3 +133,4 @@
 (load! "+colmak.el")
 (load! "+splash.el")
 (load! "+keycast.el")
+(load! "+clojure.el")

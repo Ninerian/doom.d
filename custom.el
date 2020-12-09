@@ -8,7 +8,14 @@
  '(doom-big-font-mode t t)
  '(pos-tip-background-color "#191F26")
  '(pos-tip-foreground-color "#d4d4d6")
- '(safe-local-variable-values '((lsp-kotlin-compiler-jvm-target . "14"))))
+ '(safe-local-variable-values
+   '((cider-ns-refresh-after-fn . "integrant.repl/resume")
+     (cider-ns-refresh-before-fn . "integrant.repl/suspend")
+     (cider-refresh-after-fn . "integrant.repl/resume")
+     (cider-refresh-before-fn . "integrant.repl/suspend")
+     (cider-refresh-after-fn . "user/go")
+     (cider-refresh-before-fn . "user/halt")
+     (lsp-kotlin-compiler-jvm-target . "14"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
