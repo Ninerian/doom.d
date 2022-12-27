@@ -58,8 +58,10 @@
       :nv "E" 'evil-scroll-page-down
       :nv "l" 'undo
       :nv "L" 'redo)
-
   )
+
+(after! evil
+  (map! :nv "I" 'evil-window-bottom))
 
 (after! org
   (remove-hook 'org-mode-hook 'evil-org-mode)

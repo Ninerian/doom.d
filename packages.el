@@ -9,9 +9,9 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
 (package! kaolin-themes)
+;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 
 ;; To install a package directly from a remote git repo, you must specify a
-;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/raxod502/straight.el#the-recipe-format
 ;(package! another-package
 ;  :recipe (:host github :repo "username/repo"))
@@ -53,17 +53,15 @@
 (package! wakatime-mode)
 ;; Wakatime:1 ends here
 
+;; Set this until ticket https://github.com/clojure-emacs/cider/issues/3029 and
+;; https://github.com/hlissner/doom-emacs/issues/5537 are closed
+(package! map :pin "bb50dbaafc0f71743bd9ffd5784258a9fd682c20")
+
 ;; [[file:packages.org::*Evil Colemak][Evil Colemak:1]]
 (package! evil-colemak-basics)
 (package! evil-better-visual-line)
 ;; Evil Colemak:1 ends here;;
 
-;;[[file:packages.org::*SaltStack Mode][SaltStack Mode:1]]
-(package! salt-mode
-:recipe (:host github
-         :repo "glynnforrest/salt-mode"))
-;; SaltStack Mode:1 ends here
-;;
 ;; [[file:packages.org::*MELPA Helper][MELPA Helper:1]]
 (package! package-lint)
 (package! flycheck-package)
@@ -86,3 +84,14 @@
 (package! magit-delta)
 
 (package! nvm)
+
+(package! tree-sitter)
+(package! tree-sitter-langs)
+
+(package! exec-path-from-shell)
+
+(package! esup)
+
+(package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))
+(package! prisma-mode :recipe (:host github :repo "pimeys/emacs-prisma-mode" :branch "main"))
+(package! neil :recipe (:host github :repo "babashka/neil" :files ("*.el")))
